@@ -4,12 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from "./header/header.component";
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { RecipeeBookComponent } from './recipee-book/recipee-book.component';
-import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
-import { RecipeeItemComponent } from "./recipee-item/recipee-item.component";
-import { RecipeeDetailsComponent } from './recipee-details/recipee-details.component';
+import { RecipeeBookComponent } from './recipees/recipee-book/recipee-book.component';
+import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { RecipeeItemComponent } from "./recipees/recipee-book/recipee-item/recipee-item.component";
+import { RecipeeDetailsComponent } from './recipees/recipee-details/recipee-details.component';
+import { RecipeesComponent } from "./recipees/recipees.component";
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -18,6 +19,7 @@ import { RecipeeDetailsComponent } from './recipee-details/recipee-details.compo
     ShoppingListEditComponent,
     RecipeeItemComponent,
     RecipeeDetailsComponent,
+    RecipeesComponent
   ],
   imports: [
     BrowserModule
