@@ -17,10 +17,10 @@
                 <h4 class="list-group-item-heading">{{recipee.name}}</h4>
                 <p class="list-group-item-text">{{recipee.description}}</p>
             </div>
-            <div class="float-right">
+            <div class="float-right"> 
                 <!-- recipee image -->
                 <!-- use property binding on src attribute of  -->
-                <img [src]="recipee.imagePath" [alt]="recipee.name" class="img-responsive" style="max-height: 50px;">
+                <img [src]="recipee.imagePath" [alt]="recipee.name" class="img-fluid"style="max-height: 50px;">
             </div>
         </a>
         <app-recipee-item></app-recipee-item>
