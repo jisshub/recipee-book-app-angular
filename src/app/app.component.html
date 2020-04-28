@@ -1,9 +1,11 @@
-<app-header></app-header>
+<!-- get emitter object here -->
+<app-header (featureSelected)="OnEmitter($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col col-md-12">
-      <app-recipees></app-recipees>      
-      <app-shopping-list></app-shopping-list>
+      <!-- use ngIf to display content based on clciked navgation -->
+      <app-recipees *ngIf="loadedFeature==='recipee'"></app-recipees>      
+      <app-shopping-list *ngIf="loadedFeature === 'shoppingList'"></app-shopping-list>
     </div>
   </div>
 </div>

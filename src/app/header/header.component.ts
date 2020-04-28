@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "app-header",
@@ -8,10 +8,11 @@ import { Component } from "@angular/core";
 
 export class HeaderComponent {
 
-    OnRecipeeInfo(){
-        console.log('working')
+    // emit an event to the app component. thus make it listenable to app component
+    @Output() featureSelected = new EventEmitter<string>();
+    // so here when v claick a link it emits an event
+    OnSelect(feature: string){
+        this.featureSelected.emit(feature);
     }
-    OnShoppingList(){
-        
-    }
+    
 }

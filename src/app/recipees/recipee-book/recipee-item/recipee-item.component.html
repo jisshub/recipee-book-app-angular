@@ -1,1 +1,14 @@
-<p>recipee item works</p>
+<a href="#" class="list-group-item clearfix" *ngFor="let recipee of recipeeList">
+    <!-- to put the content left of the list item -->
+    <div class="float-left">
+        <!-- give recipee name and its description -->
+        <!-- access each property sepcified in models.ts from array of objects  -->
+        <h4 class="list-group-item-heading">{{recipee.name}}</h4>
+        <p class="list-group-item-text">{{recipee.description}}</p>
+    </div>
+    <div class="float-right"> 
+        <!-- recipee image -->
+        <!-- use property binding on src attribute of  -->
+        <img [src]="recipee.imagePath" [alt]="recipee.name" class="img-fluid"style="max-height: 50px;">
+    </div>
+</a>

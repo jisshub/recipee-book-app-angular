@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop-recipee-app';
+  // set a feature initially,
+  loadedFeature: string = "recipee";
+
+  // define method that got the event data
+  OnEmitter(feature: string){
+    this.loadedFeature = feature;
+  }
 }
