@@ -15,7 +15,8 @@ export class RecipeeBookComponent implements OnInit {
     new Recipee("a test recipee for all", "a delicious recipee for all", 
     "https://www.andiemitchell.com/wp-content/uploads/2011/01/baked-buffalo-chicken-rolls-1-680x477.jpg"),
     new Recipee("a test recipee for all", "a delicious recipee for all", 
-    "https://www.andiemitchell.com/wp-content/uploads/2011/01/baked-buffalo-chicken-rolls-1-680x477.jpg")
+    "https://www.andiemitchell.com/wp-content/uploads/2011/01/baked-buffalo-chicken-rolls-1-680x477.jpg"),
+    new Recipee("a new test recipee", "lorem ipsum", "https://www.andiemitchell.com/wp-content/uploads/2011/01/baked-buffalo-chicken-rolls-1-680x477.jpg")
   ];
   constructor() { }
 
