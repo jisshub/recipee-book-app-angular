@@ -9,20 +9,9 @@
     <div class="col-md-12">
         <!-- here v add teplate for single recipee item -->
         <!-- use ngFor directive to outputa list of recipees -->
-        <a href="#" class="list-group-item clearfix" *ngFor="let recipee of recipeeList">
-            <!-- to put the content left of the list item -->
-            <div class="float-left">
-                <!-- give recipee name and its description -->
-                <!-- access each property sepcified in models.ts from array of objects  -->
-                <h4 class="list-group-item-heading">{{recipee.name}}</h4>
-                <p class="list-group-item-text">{{recipee.description}}</p>
-            </div>
-            <div class="float-right"> 
-                <!-- recipee image -->
-                <!-- use property binding on src attribute of  -->
-                <img [src]="recipee.imagePath" [alt]="recipee.name" class="img-fluid"style="max-height: 50px;">
-            </div>
-        </a>
-        <app-recipee-item></app-recipee-item>
+
+        <!-- and attech each recipee to recipeeEl through property binding -->
+        <app-recipee-item *ngFor="let recipee of recipeeList" [recipeeEl]="recipee" (recipeeInfo)="onRecipeeSelected(recipee)"></app-recipee-item>
+        <!-- here event binding on recipeeInfo - pass recipee selected as argument -->
     </div>
 </div>

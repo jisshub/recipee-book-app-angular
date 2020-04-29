@@ -10,8 +10,12 @@ export class AppComponent {
   // set a feature initially,
   loadedFeature: string = "recipee";
 
+
   // define method that got the event data
   OnEmitter(feature: string){
     this.loadedFeature = feature;
   }
+
+
+
 }
