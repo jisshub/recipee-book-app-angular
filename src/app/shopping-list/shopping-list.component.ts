@@ -11,15 +11,13 @@ import { Ingredient } from "../shared/ingredient.model";
 export class ShoppingListComponent implements OnInit {
   
     // create an ingredients array of type Ingredient class
-    ingredients: Ingredient[]=[
-      new Ingredient("fsdas", 123),
-      new Ingredient("dgdsd", 223),
-    ]
-    constructor() {
+    ingredients: Ingredient[]=[]
+    constructor() {}
 
-     }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onIngData(getEmittedData: {name: string, amount: string}){
+    // push the emitted data to array as 
+    this.ingredients.push(new Ingredient(getEmittedData.name, getEmittedData.amount))
   }
 
 }
