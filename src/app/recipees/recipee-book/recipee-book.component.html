@@ -11,7 +11,8 @@
         <!-- use ngFor directive to outputa list of recipees -->
 
         <!-- and attech each recipee to recipeeEl through property binding -->
-        <app-recipee-item *ngFor="let recipee of recipeeList" [recipeeEl]="recipee" (recipeeInfo)="onRecipeeSelected(recipee)"></app-recipee-item>
+
+        <app-recipee-item *ngFor="let recipee of recipeeList" [recipeeEl]="recipee" ></app-recipee-item>
         <!-- here event binding on recipeeInfo - pass recipee selected as argument -->
     </div>
 </div>

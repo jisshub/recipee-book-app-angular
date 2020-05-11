@@ -1,5 +1,6 @@
 import { Component, Input,Output, EventEmitter } from "@angular/core";
 import { Recipee } from "../../recipees.model";
+import { RecipeeService } from '../../recipee.service';
 
 @Component({
     selector: "app-recipee-item",
@@ -9,14 +10,18 @@ import { Recipee } from "../../recipees.model";
 
 export class RecipeeItemComponent{
 
+  // inhecr recipeeService instance
+  constructor(private recipeeService: RecipeeService){};
+
   // get the input data passed from recipee-book component
   @Input() recipeeEl: Recipee;
 
   // create event emitter object that emits void
   // to recipees component.
-  @Output() recipeeInfo = new EventEmitter<void>();
 
   onRecipeeData(){
-    this.recipeeInfo.emit()
+
+    // emit the recipee
+    this.recipeeService.recipeeSelected.emit(this.recipeeEl);
   }
 }

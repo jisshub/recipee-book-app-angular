@@ -19,7 +19,7 @@ import { RecipeesComponent } from "./recipees/recipees.component";
     ShoppingListEditComponent,
     RecipeeItemComponent,
     RecipeeDetailsComponent,
-    RecipeesComponent
+    RecipeesComponent,
   ],
   imports: [
     BrowserModule
