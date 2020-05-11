@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ShoppingListService } from '../shopping_list.service';
 
 @Component({
@@ -8,7 +8,6 @@ import { ShoppingListService } from '../shopping_list.service';
 })
 export class ShoppingListEditComponent implements OnInit {
 
-  // @Output() ingredients = new EventEmitter<{name: string, amount: string}>()
   constructor(private shoppingService: ShoppingListService) { }
 
   ngOnInit(): void {
